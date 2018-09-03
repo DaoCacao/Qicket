@@ -7,8 +7,8 @@ import dagger.Module
 abstract class MainModule {
 
     @Binds
-    abstract fun view(mainActivity: MainActivity): MainFacade.View
+    abstract fun view(activity: MainActivity): MainFacade.View
 
     @Binds
-    abstract fun presenter(mainPresenter: MainPresenter): MainFacade.Presenter
+    abstract fun presenter(presenter: MainPresenter): MainFacade.Presenter
 }

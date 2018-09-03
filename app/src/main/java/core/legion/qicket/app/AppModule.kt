@@ -3,10 +3,13 @@ package core.legion.qicket.app
 import android.content.Context
 import dagger.Binds
 import dagger.Module
+import dagger.Provides
+import javax.inject.Singleton
 
 @Module
-abstract class AppModule {
+class AppModule(private val context: Context) {
 
-    @Binds
-    abstract fun context(appLoader: AppLoader): Context
+    @Provides
+    @Singleton
+    fun context() = context
 }
